@@ -16,6 +16,6 @@ public class js3 {
         plus.tambah = "Pertambahan";
 
         System.out.println("\nOperasi ini bernama "+ plus.tambah);
-        System.out.println("Hasil dari 10+55= "+plus.hasil);
+        System.out.println("Hasil dari 10 + 55 = "+plus.hasil);
     }
 }
