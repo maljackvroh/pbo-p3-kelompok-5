@@ -25,9 +25,9 @@ public class js8 {
         int waktu = obj.nextInt();
 
         // deklarasi objek
-        car air = new car(jarak, waktu);
+        car bil = new car(jarak, waktu);
 
         // tampilkan nilai/data
-        System.out.println("Hasil Kecepatan air berdasarkan rumus jarak/waktu: "+air.hitungKecepatan);
+        System.out.println("Hasil Kecepatan air berdasarkan rumus jarak/waktu: "+bil.hitungKecepatan);
     }
 }
