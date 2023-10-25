@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class energiP{
     double energiPot;
-    final double gravitasi = 9.81;
+    double gravitasi;
     double massa;
     double tinggi;
 
@@ -27,11 +27,12 @@ public class js9 {
         int massa = obj.nextInt();
         System.out.println("Masukan tinggi benda: ");
         int tinggi = obj.nextInt();
+        double gravitasi = 9.81;
 
         // deklarasi objek
-        energiP ep = new energiP(massa, energiP.gravitasi, tinggi);
+        energiP ep = new energiP(massa, gravitasi, tinggi);
 
         // tampilkan nilai/data
-        System.out.println("Hasil Kecepatan air berdasarkan rumus jarak/waktu: "+air.hitungKecepatan);
+        System.out.println("Hasil Kecepatan air berdasarkan rumus jarak/waktu: "+ep.energiPot);
     }
 }
