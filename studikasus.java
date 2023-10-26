@@ -6,7 +6,6 @@ class restoran{
     int bnyakMenu = 0;
     private String menu[];
     private String harga[];
-    private int kas;
 
     restoran(String namaResto, String alamatResto){
         this.namaResto = namaResto;
@@ -41,16 +40,29 @@ public class studikasus {
         Scanner in = new Scanner(System.in);
         restoran rstn = new restoran("Bensu", "Jln Sonokeling");
         
-        bool input = true;
+        boolean input = true;
 
-        if (input == true){
+        do{
             System.out.println("Masukan nama menu: ");
-            rstn.setMenu(in.nextLine());
+            rstn.setMenu(in.next());
             System.out.println("Masukan harga: ");
-            rstn.setHarga(in.nextInt());
-        } else {
-            break;
-        }
+            rstn.setHarga(in.next());
+
+            System.out.println("Apakah anda ingin memasukan data lagi?(Y/N)");
+            String pil = in.next();
+
+            if(pil == "Y"){
+                input = true;
+            } else if(pil == "N") {
+                input = false;
+            } else{
+                System.out.println("Inputan anda salah!");
+                input = true;
+            }
+        } while(input = true);
+
+
+        rstn.getMenu();
 
     }
 }
