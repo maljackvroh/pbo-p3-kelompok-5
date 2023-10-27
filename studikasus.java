@@ -3,7 +3,7 @@ import java.util.Scanner;
 class restoran{
     String namaResto;
     String alamatResto;
-    int bnyakMenu = 0;
+    int bnyakMenu;
     String menu[];
     String harga[];
     boolean input;
@@ -28,8 +28,8 @@ class restoran{
     public void getMenu(){
         System.out.println("Berikut daftar menu: ");
         for(int i = 1; i < bnyakMenu; i++){
-            System.out.println(i+" "+menu[i-1]);
-            System.out.println("Harga "+harga[i-1]);
+            System.out.println(i+"  "+menu[i-1]);
+            System.out.println("   Harga "+harga[i-1]);
         }
     }
 
@@ -42,8 +42,6 @@ public class studikasus {
      public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         restoran rstn = new restoran("Bensu", "Jln Sonokeling");
-        
-        int input;
 
         do{
             System.out.println("Masukan nama menu: ");
@@ -52,7 +50,7 @@ public class studikasus {
             System.out.println("Masukan harga: ");
             rstn.setHarga(in.next());
 
-            System.out.println("Apakah anda ingin memasukan data lagi?(1/0)");
+            System.out.println("Apakah anda ingin memasukan data lagi?(true/false)");
             rstn.input = in.nextBoolean();
 
         } while(rstn.input == true);
