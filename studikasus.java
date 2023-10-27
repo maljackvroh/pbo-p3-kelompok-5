@@ -4,12 +4,14 @@ class restoran{
     String namaResto;
     String alamatResto;
     int bnyakMenu = 0;
-    private String menu[];
-    private String harga[];
+    String menu[];
+    String harga[];
 
     restoran(String namaResto, String alamatResto){
         this.namaResto = namaResto;
         this.alamatResto = alamatResto;
+        menu = new String[20];
+        harga = new String[20];
     }
 
     public void setMenu(String newMenu){
@@ -36,7 +38,7 @@ class restoran{
 
 
 public class studikasus {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         restoran rstn = new restoran("Bensu", "Jln Sonokeling");
         
@@ -45,6 +47,7 @@ public class studikasus {
         do{
             System.out.println("Masukan nama menu: ");
             rstn.setMenu(in.next());
+
             System.out.println("Masukan harga: ");
             rstn.setHarga(in.next());
 
@@ -57,7 +60,7 @@ public class studikasus {
                 input = false;
             } else{
                 System.out.println("Inputan anda salah!");
-                input = true;
+                input = false;
             }
         } while(input = true);
 
