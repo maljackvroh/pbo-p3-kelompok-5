@@ -5,31 +5,29 @@ class restoran{
     String alamatResto;
     int bnyakMenu;
     String menu[];
-    String harga[];
+    int harga[];
     boolean input;
 
     restoran(String namaResto, String alamatResto){
         this.namaResto = namaResto;
         this.alamatResto = alamatResto;
         menu = new String[20];
-        harga = new String[20];
+        harga = new int[20];
     }
 
     public void setMenu(String newMenu){
         menu[bnyakMenu] = newMenu;
-        bnyakMenu++;
     }
 
-    public void setHarga(String newHarga){
-        menu[bnyakMenu] = newHarga;
-        bnyakMenu++;
+    public void setHarga(int newHarga){
+        harga[bnyakMenu] = newHarga;
     }
 
     public void getMenu(){
         System.out.println("Berikut daftar menu: ");
-        for(int i = 1; i < bnyakMenu; i++){
-            System.out.println(i+"  "+menu[i-1]);
-            System.out.println("   Harga "+harga[i-1]);
+        for(int i = 0; i < bnyakMenu; i++){
+            System.out.println(i+"  "+menu[i]);
+            System.out.println("   Harga "+harga[i]);
         }
     }
 
@@ -48,8 +46,8 @@ public class studikasus {
             rstn.setMenu(in.next());
 
             System.out.println("Masukan harga: ");
-            rstn.setHarga(in.next());
-
+            rstn.setHarga(in.nextInt());
+            rstn.bnyakMenu++;
             System.out.println("Apakah anda ingin memasukan data lagi?(true/false)");
             rstn.input = in.nextBoolean();
 
