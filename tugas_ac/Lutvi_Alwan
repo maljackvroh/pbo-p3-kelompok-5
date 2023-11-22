@@ -1,0 +1,36 @@
+class info {
+    String nomorPlat;
+    String jenisKendaraan;
+    String daerah;
+
+    public info() {
+        nomorPlat = "DR 2900 WJF";
+        jenisKendaraan = "Motor";
+        daerah = "Pulau Lombok";
+    }
+
+    public info(String np, String jk, String d) {
+        nomorPlat = np;
+        jenisKendaraan = jk;
+        daerah = d;
+    }
+
+    public void display() {
+        System.out.println("Nomor Plat      : " + nomorPlat);
+        System.out.println("Jenis Kendaraan : " + jenisKendaraan);
+        System.out.println("Daerah          : " + daerah);
+    }
+}
+
+public class platKendaraan {
+    public static void main(String[] args) {
+        info plat1 = new info();
+        info plat2 = new info("DK 5228 GD", "Motor", "Pulau Bali");
+
+        System.out.println("~Informasi Plat 1~");
+        plat1.display();
+        System.out.println();
+        System.out.println("~Informasi Plat 2~");
+        plat2.display();
+    }
+}
